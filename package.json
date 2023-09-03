@@ -1,0 +1,53 @@
+{
+  "name": "project-pepper",
+  "version": "1.0.0",
+  "description": "Project includes contract and website",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm run update:env && npm run clean:all && npm run install:all",
+    "update:env": "cp .env packages/backend/.env && cp .env packages/frontend/.env",
+    "clean:all": "npx concurrently --timings 'npm:clean' 'npm:clean:frontend' 'npm:clean:backend' -c 'bgRed,bgYellow,bgGreen'",
+    "clean": "npx rimraf node_modules package-lock.json",
+    "clean:backend": "npm run clean --prefix packages/backend",
+    "clean:frontend": "npm run clean --prefix packages/frontend",
+    "install:all": "npx concurrently --timings 'npm install' 'npm:install:frontend' 'npm:install:backend' -c 'bgWhite,bgBlue,bgMagenta'",
+    "install:backend": "(cd ./packages/backend && npm install)",
+    "install:frontend": "(cd ./packages/frontend && npm install)",
+    "backend:start": "npm run start --prefix packages/backend",
+    "backend:compile": "npm run compile --prefix packages/backend",
+    "backend:deploy:local": "npm run deploy:local --prefix packages/backend",
+    "backend:deploy:goerli": "npm run deploy:goerli --prefix packages/backend",
+    "frontend:dev:local": "npm run dev:local --prefix packages/frontend",
+    "frontend:dev:goerli": "npm run dev:goerli --prefix packages/frontend",
+    "frontend:tsc": "npm run tsc --prefix packages/frontend",
+    "frontend:lint": "npm run lint --prefix packages/frontend",
+    "frontend:prettier": "npm run prettier --prefix packages/frontend",
+    "prepare": "husky install",
+    "typecheck": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run frontend:tsc",
+      "npm run frontend:lint -- -- --fix",
+      "npm run frontend:prettier"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.dev.sh.ctripcorp.com:FlightMobile/project-pepper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "concurrently": "^7.6.0",
+    "constructs": "10.1.156",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.0",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "i18next": "^23.4.6"
+  }
+}

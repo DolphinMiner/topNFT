@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "npx rimraf node_modules package-lock.json",
+    "start": "npx hardhat node",
+    "compile": "npx hardhat compile",
+    "deploy:local": "npx hardhat --network localhost run ./scripts/deploy.js",
+    "deploy:goerli": "npx hardhat --network goerli run ./scripts/deploy.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "2.1.1",
+    "@nomiclabs/hardhat-waffle": "2.0.3",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.3",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.7.1",
+    "hardhat": "^2.11.2",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.2.32"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "4.8.0-rc.1"
+  }
+}
