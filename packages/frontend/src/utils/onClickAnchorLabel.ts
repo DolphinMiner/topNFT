@@ -4,6 +4,7 @@ export const onClickAnchorLabel = (anchor: string) => {
   ) as HTMLAnchorElement | null;
   const offsetHeight = 64;
   if (anchorElement) {
+    window.localStorage.setItem("anchor", anchor);
     window.scrollTo({
       behavior: "smooth",
       top: anchorElement.offsetTop - offsetHeight,
