@@ -10,7 +10,7 @@ export function HomePage() {
         return (
           <div key={anchor} className="flex h-screen pt-16">
             <div className="flex w-full p-16" id={anchor}>
-              <div className="w-full rounded-lg bg-[#1531f5] text-white">
+              <div className="w-full rounded-lg bg-[#1531f5] p-8 text-white">
                 {anchor}
               </div>
             </div>
