@@ -2,10 +2,21 @@ import classNames from "classnames";
 
 type DiscordProps = {
   className?: string;
+  width?: number;
+  height?: number;
 };
-export const Discord = ({ className }: DiscordProps) => {
+export const Discord = ({
+  width = 26,
+  height = 26,
+  className,
+}: DiscordProps) => {
   return (
-    <svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1">
+    <svg
+      width={`${width}px`}
+      height={`${height}px`}
+      viewBox="0 0 26 26"
+      version="1.1"
+    >
       <g
         id="discordG1"
         stroke="none"

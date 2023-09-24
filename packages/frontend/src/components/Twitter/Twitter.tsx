@@ -2,10 +2,21 @@ import classNames from "classnames";
 
 type TwitterProps = {
   className?: string;
+  width?: number;
+  height?: number;
 };
-export const Twitter = ({ className }: TwitterProps) => {
+export const Twitter = ({
+  width = 26,
+  height = 26,
+  className,
+}: TwitterProps) => {
   return (
-    <svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1">
+    <svg
+      width={`${width}px`}
+      height={`${height}px`}
+      viewBox="0 0 26 26"
+      version="1.1"
+    >
       <g
         id="twitterG1"
         stroke="none"
