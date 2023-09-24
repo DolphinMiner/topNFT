@@ -1,15 +1,16 @@
-import { useEffect } from "react";
-import { useRouter } from "next/router";
-import i18next from "i18next";
+import dynamic from "next/dynamic";
+import { useIsMounted } from "@/hooks/useIsMounted";
 
-export default function Root() {
-  const router = useRouter();
+const HomePage = dynamic(
+  () => import("@/screens/HomePage").then((mod) => mod.HomePage),
+  {
+    ssr: true,
+  },
+);
 
-  useEffect(() => {
-    if (router.pathname === "/") {
-      router.push("/" + i18next.language.substring(0, 2));
-    }
-  });
+export default function Home() {
+  const isMounted = useIsMounted();
 
-  return null;
+  if (!isMounted) return null;
+  return <HomePage />;
 }

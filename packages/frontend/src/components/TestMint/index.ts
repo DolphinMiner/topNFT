@@ -1,3 +1,1 @@
-import TestMint from "./TestMint";
-
-export default TestMint;
+export { TestMint } from "./TestMint";

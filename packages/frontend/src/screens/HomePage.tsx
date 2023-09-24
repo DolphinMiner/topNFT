@@ -1,22 +1,11 @@
-"use client";
-
 import { useState, useEffect } from "react";
-import Wrapper from "./Wrapper";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import MainPic from "@/components/MainPic";
-import {
-  generalImgLazyLoading,
-  rowImgLazyLoading,
-} from "@/utils/imgLazyLoading";
+import { ConnectWallet } from "@/components/ConnectWallet";
+import { TestMint } from "@/components/TestMint";
 
-export default function HomePage() {
+export function HomePage() {
   const [isDesktop, setIsDesktop] = useState(window?.innerWidth >= 746);
 
   useEffect(() => {
-    generalImgLazyLoading();
-    rowImgLazyLoading();
-
     const handleWindowWidth = () => {
       setIsDesktop(window?.innerWidth >= 746);
     };
@@ -29,12 +18,9 @@ export default function HomePage() {
   }, [isDesktop]);
 
   return (
-    <Wrapper>
-      <div className="m-auto bg-[#3264FF]">
-        <Header page="home" isDesktop={isDesktop} />
-        <MainPic isDesktop={isDesktop} page="home" />
-      </div>
-      <Footer page="home" />
-    </Wrapper>
+    <div>
+      <ConnectWallet />
+      <TestMint />
+    </div>
   );
 }

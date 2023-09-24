@@ -1,17 +1,12 @@
-"use client";
-import { useState, useEffect, ReactNode } from "react";
+import { ReactNode } from "react";
+import { useIsMounted } from "@/hooks/useIsMounted";
 
 type Props = {
   children: ReactNode;
 };
-export default function ClientOnly({ children }: Props) {
-  const [hasMounted, setHasMounted] = useState(false);
-
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
-
-  if (!hasMounted) return null;
+export function ClientOnly({ children }: Props) {
+  const isMounted = useIsMounted();
+  if (!isMounted) return null;
 
   return <>{children}</>;
 }

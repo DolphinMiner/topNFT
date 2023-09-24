@@ -1,6 +1,6 @@
-import React from "react";
-import { Address } from "wagmi";
+import { Address } from "@wagmi/core";
 import { Abi } from "abitype";
+import React from "react";
 import { getConfigs } from "./utils";
 import { isGoerli, isProd } from "@/utils/checkEnv";
 import { ENV } from "@/constants/env";
@@ -22,6 +22,4 @@ export const contractConfigs = {
   }
 >;
 
-const ContractConfigsContext = React.createContext(contractConfigs);
-
-export default ContractConfigsContext;
+export const ContractConfigsContext = React.createContext(contractConfigs);

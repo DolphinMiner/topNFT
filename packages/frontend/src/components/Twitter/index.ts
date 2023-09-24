@@ -1,3 +1,1 @@
-import Twitter from "./Twitter";
-
-export default Twitter;
+export { Twitter } from "./Twitter";

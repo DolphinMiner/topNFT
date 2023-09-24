@@ -3,7 +3,7 @@ import classNames from "classnames";
 type DiscordProps = {
   className?: string;
 };
-const Discord = ({ className }: DiscordProps) => {
+export const Discord = ({ className }: DiscordProps) => {
   return (
     <svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1">
       <g
@@ -34,5 +34,3 @@ const Discord = ({ className }: DiscordProps) => {
     </svg>
   );
 };
-
-export default Discord;
