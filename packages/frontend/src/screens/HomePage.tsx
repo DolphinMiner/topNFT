@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+import { Header, NEED_ANCHOR } from "@/components/Header";
 import { RelatedLinks } from "@/components/RelatedLinks/RelatedLinks";
 
 export function HomePage() {
@@ -6,26 +6,17 @@ export function HomePage() {
     <div className="mx-auto flex min-h-screen max-w-5xl flex-col bg-[#f8f9fa]">
       <Header />
       <RelatedLinks />
-      <div className="flex h-screen pt-16">
-        <div className="w-full" id="Logo">
-          Home
-        </div>
-      </div>
-      <div className="flex h-screen pt-16">
-        <div className="w-full" id="About">
-          About
-        </div>
-      </div>
-      <div className="flex h-screen pt-16">
-        <div className="w-full" id="Roadmap">
-          Roadmap
-        </div>
-      </div>
-      <div className="flex h-screen pt-16">
-        <div className="w-full" id="Team">
-          Team
-        </div>
-      </div>
+      {NEED_ANCHOR.map((anchor) => {
+        return (
+          <div key={anchor} className="flex h-screen pt-16">
+            <div className="flex w-full p-16" id={anchor}>
+              <div className="w-full rounded-lg bg-[#1531f5] p-8 text-white">
+                {anchor}
+              </div>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
