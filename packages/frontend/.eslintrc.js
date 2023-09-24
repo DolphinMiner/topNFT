@@ -18,11 +18,11 @@ module.exports = {
     "import/no-named-as-default-member": "off",
     "import/order": "error",
     "no-console": "warn",
-    "no-unused-vars": "warn",
+    "no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/ban-ts-comment": "warn",
-    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": "error",
     "@next/next/no-img-element": "off",
   },
 };

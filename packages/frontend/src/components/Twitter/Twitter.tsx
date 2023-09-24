@@ -1,11 +1,16 @@
-import classNames from "classnames";
-
 type TwitterProps = {
   className?: string;
+  width?: number;
+  height?: number;
 };
-const Twitter = ({ className }: TwitterProps) => {
+export const Twitter = ({ width = 26, height = 26 }: TwitterProps) => {
   return (
-    <svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1">
+    <svg
+      width={`${width}px`}
+      height={`${height}px`}
+      viewBox="0 0 26 26"
+      version="1.1"
+    >
       <g
         id="twitterG1"
         stroke="none"
@@ -18,10 +23,7 @@ const Twitter = ({ className }: TwitterProps) => {
           <g
             id="twitterG3"
             transform="translate(2.166667, 3.791667)"
-            className={classNames([
-              `fill-black hover:fill-white`,
-              className ? className : "",
-            ])}
+            className={`fill-[#1531f5] hover:fill-[#1531f5]`}
             fillRule="nonzero"
           >
             <path
@@ -34,5 +36,3 @@ const Twitter = ({ className }: TwitterProps) => {
     </svg>
   );
 };
-
-export default Twitter;

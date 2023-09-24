@@ -1,11 +1,16 @@
-import classNames from "classnames";
-
 type DiscordProps = {
   className?: string;
+  width?: number;
+  height?: number;
 };
-const Discord = ({ className }: DiscordProps) => {
+export const Discord = ({ width = 26, height = 26 }: DiscordProps) => {
   return (
-    <svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1">
+    <svg
+      width={`${width}px`}
+      height={`${height}px`}
+      viewBox="0 0 26 26"
+      version="1.1"
+    >
       <g
         id="discordG1"
         stroke="none"
@@ -18,10 +23,7 @@ const Discord = ({ className }: DiscordProps) => {
           <g
             id="discordG3"
             transform="translate(1.625000, 4.333333)"
-            className={classNames([
-              `fill-black hover:fill-white`,
-              className ? className : "",
-            ])}
+            className={`fill-[#1531f5] hover:fill-[#1531f5]`}
             fillRule="nonzero"
           >
             <path
@@ -34,5 +36,3 @@ const Discord = ({ className }: DiscordProps) => {
     </svg>
   );
 };
-
-export default Discord;

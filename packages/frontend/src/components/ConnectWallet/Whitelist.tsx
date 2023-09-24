@@ -1,22 +1,24 @@
 import { useContext, useMemo } from "react";
 import { Address, useContractRead } from "wagmi";
-import ContractConfigsContext from "@/providers/contract";
+import { ContractConfigsContext } from "@/providers/contract";
 import { getMerkleProof } from "@/utils/merkleTree";
 
 type WhitelistProps = {
   address: Address;
 };
-export default function Whitelist({ address }: WhitelistProps) {
-  const { trekkiNFT: trekkiNFTCfg } = useContext(ContractConfigsContext);
+export function Whitelist({ address }: WhitelistProps) {
+  const { trekkiNFT } = useContext(ContractConfigsContext);
   const merkleProof = useMemo(() => {
     if (!address) return "";
     return getMerkleProof(address);
   }, [address]);
 
+  const args = [address, merkleProof];
+
   const { data: isInWhiteList } = useContractRead({
-    ...trekkiNFTCfg,
+    ...trekkiNFT,
     functionName: "isValidUser",
-    args: [address, merkleProof],
+    args: args,
   });
 
   return (

@@ -1,40 +1,31 @@
-"use client";
+import { Header } from "@/components/Header";
+import { RelatedLinks } from "@/components/RelatedLinks/RelatedLinks";
 
-import { useState, useEffect } from "react";
-import Wrapper from "./Wrapper";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import MainPic from "@/components/MainPic";
-import {
-  generalImgLazyLoading,
-  rowImgLazyLoading,
-} from "@/utils/imgLazyLoading";
-
-export default function HomePage() {
-  const [isDesktop, setIsDesktop] = useState(window?.innerWidth >= 746);
-
-  useEffect(() => {
-    generalImgLazyLoading();
-    rowImgLazyLoading();
-
-    const handleWindowWidth = () => {
-      setIsDesktop(window?.innerWidth >= 746);
-    };
-
-    window?.addEventListener("resize", handleWindowWidth);
-
-    return () => {
-      window?.removeEventListener("resize", handleWindowWidth);
-    };
-  }, [isDesktop]);
-
+export function HomePage() {
   return (
-    <Wrapper>
-      <div className="m-auto bg-[#3264FF]">
-        <Header page="home" isDesktop={isDesktop} />
-        <MainPic isDesktop={isDesktop} page="home" />
+    <div className="mx-auto flex min-h-screen max-w-5xl flex-col bg-[#f8f9fa]">
+      <Header />
+      <RelatedLinks />
+      <div className="flex h-screen pt-16">
+        <div className="w-full" id="Logo">
+          Home
+        </div>
       </div>
-      <Footer page="home" />
-    </Wrapper>
+      <div className="flex h-screen pt-16">
+        <div className="w-full" id="About">
+          About
+        </div>
+      </div>
+      <div className="flex h-screen pt-16">
+        <div className="w-full" id="Roadmap">
+          Roadmap
+        </div>
+      </div>
+      <div className="flex h-screen pt-16">
+        <div className="w-full" id="Team">
+          Team
+        </div>
+      </div>
+    </div>
   );
 }

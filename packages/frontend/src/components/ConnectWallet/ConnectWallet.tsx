@@ -1,9 +1,9 @@
 "use client";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
-import ClientOnly from "../ClientOnly";
-import Whitelist from "./Whitelist";
+import { ClientOnly } from "../ClientOnly";
+import { Whitelist } from "./Whitelist";
 
-export default function ConnectWallet() {
+export function ConnectWallet() {
   const { address, connector, isConnected } = useAccount();
   const { connect, connectors, error, isLoading, pendingConnector } =
     useConnect({

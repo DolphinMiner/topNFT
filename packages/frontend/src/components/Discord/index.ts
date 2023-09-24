@@ -1,3 +1,1 @@
-import Discord from "./Discord";
-
-export default Discord;
+export { Discord } from "./Discord";

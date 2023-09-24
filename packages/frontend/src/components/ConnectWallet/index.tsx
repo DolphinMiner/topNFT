@@ -1,3 +1,1 @@
-import ConnectWallet from "./ConnectWallet";
-
-export default ConnectWallet;
+export { ConnectWallet } from "./ConnectWallet";
