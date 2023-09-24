@@ -8,7 +8,7 @@ export function HomePage() {
       <RelatedLinks />
       {NEED_ANCHOR.map((anchor) => {
         return (
-          <div key={anchor} className="flex h-screen pt-16">
+          <div key={anchor} className="flex min-h-screen pt-16">
             <div className="flex w-full p-16" id={anchor}>
               <div className="w-full rounded-lg bg-[#1531f5] p-8 text-white">
                 {anchor}
