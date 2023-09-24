@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { onClickAnchorLabel } from "@/utils/onClickAnchorLabel";
 
 const NEED_ACTIVE = ["About", "Roadmap", "Team"] as const;
-const NEED_ANCHOR = ["Logo", ...NEED_ACTIVE] as const;
+export const NEED_ANCHOR = ["Logo", ...NEED_ACTIVE] as const;
 const MENU = [...NEED_ANCHOR, "Premint"] as const;
 
 export const Header = () => {
