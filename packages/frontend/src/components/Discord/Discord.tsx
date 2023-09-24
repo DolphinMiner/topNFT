@@ -1,15 +1,9 @@
-import classNames from "classnames";
-
 type DiscordProps = {
   className?: string;
   width?: number;
   height?: number;
 };
-export const Discord = ({
-  width = 26,
-  height = 26,
-  className,
-}: DiscordProps) => {
+export const Discord = ({ width = 26, height = 26 }: DiscordProps) => {
   return (
     <svg
       width={`${width}px`}
@@ -29,10 +23,7 @@ export const Discord = ({
           <g
             id="discordG3"
             transform="translate(1.625000, 4.333333)"
-            className={classNames([
-              `fill-black hover:fill-white`,
-              className ? className : "",
-            ])}
+            className={`fill-[#1531f5] hover:fill-[#1531f5]`}
             fillRule="nonzero"
           >
             <path

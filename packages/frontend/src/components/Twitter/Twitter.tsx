@@ -1,15 +1,9 @@
-import classNames from "classnames";
-
 type TwitterProps = {
   className?: string;
   width?: number;
   height?: number;
 };
-export const Twitter = ({
-  width = 26,
-  height = 26,
-  className,
-}: TwitterProps) => {
+export const Twitter = ({ width = 26, height = 26 }: TwitterProps) => {
   return (
     <svg
       width={`${width}px`}
@@ -29,10 +23,7 @@ export const Twitter = ({
           <g
             id="twitterG3"
             transform="translate(2.166667, 3.791667)"
-            className={classNames([
-              `fill-black hover:fill-white`,
-              className ? className : "",
-            ])}
+            className={`fill-[#1531f5] hover:fill-[#1531f5]`}
             fillRule="nonzero"
           >
             <path
