@@ -1,7 +1,7 @@
 import { Header, NEED_ANCHOR } from "@/components/Header";
 import { RelatedLinks } from "@/components/RelatedLinks/RelatedLinks";
 
-export function HomePage() {
+export function Index() {
   return (
     <div className="mx-auto flex min-h-screen max-w-5xl flex-col bg-[#3394f2]">
       <Header />
