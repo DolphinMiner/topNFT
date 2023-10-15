@@ -1,5 +1,6 @@
 import { Header, NEED_ANCHOR } from "@/components/Header";
 import { RelatedLinks } from "@/components/RelatedLinks/RelatedLinks";
+import { HEADER_HEIGHT } from "@/constants/css";
 
 export function Index() {
   return (
@@ -8,11 +9,13 @@ export function Index() {
       <RelatedLinks />
       {NEED_ANCHOR.map((anchor) => {
         return (
-          <div key={anchor} className="flex min-h-screen pt-24">
-            <div className="flex w-full p-16" id={anchor}>
-              <div className="w-full rounded-lg bg-[#1531f5] p-8 text-white">
-                {anchor}
-              </div>
+          <div
+            key={anchor}
+            className={`flex min-h-screen`}
+            style={{ paddingTop: HEADER_HEIGHT }}
+          >
+            <div className="flex w-full p-0" id={anchor}>
+              <div className="w-full bg-red-50 p-0 text-white">{anchor}</div>
             </div>
           </div>
         );

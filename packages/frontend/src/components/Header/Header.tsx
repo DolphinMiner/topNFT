@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { onClickAnchorLabel } from "@/utils/onClickAnchorLabel";
+import { HEADER_HEIGHT } from "@/constants/css";
 
 const NEED_ACTIVE = ["ABOUT", "ROADMAP", "UTILITIES", "TEAM", "MINT"] as const;
 export const NEED_ANCHOR = ["HOMEPAGE", ...NEED_ACTIVE] as const;
@@ -44,7 +45,10 @@ export const Header = () => {
   };
 
   return (
-    <div className="fixed left-0 right-0 top-0 m-auto box-content flex h-24 w-full max-w-5xl flex-row flex-nowrap items-center justify-around bg-inherit">
+    <div
+      className={`fixed left-0 right-0 top-0 m-auto box-content flex w-full max-w-5xl flex-row flex-nowrap items-center justify-around bg-inherit`}
+      style={{ height: HEADER_HEIGHT }}
+    >
       <div
         className="h-20 flex-shrink-0 cursor-pointer"
         onClick={(e) => {
