@@ -1,6 +1,23 @@
 import { Header, NEED_ANCHOR } from "@/components/Header";
 import { RelatedLinks } from "@/components/RelatedLinks/RelatedLinks";
 import { HEADER_HEIGHT } from "@/constants/css";
+import {
+  About,
+  Home,
+  Mint,
+  Roadmap,
+  Team,
+  Utilities,
+} from "@/components/SubPage";
+
+const SUBPAGE = {
+  HOMEPAGE: Home,
+  ABOUT: About,
+  ROADMAP: Roadmap,
+  UTILITIES: Utilities,
+  TEAM: Team,
+  MINT: Mint,
+} as const;
 
 export function Index() {
   return (
@@ -8,6 +25,7 @@ export function Index() {
       <Header />
       <RelatedLinks />
       {NEED_ANCHOR.map((anchor) => {
+        const SubPage = SUBPAGE[anchor];
         return (
           <div
             key={anchor}
@@ -15,7 +33,7 @@ export function Index() {
             style={{ paddingTop: HEADER_HEIGHT }}
           >
             <div className="flex w-full p-0" id={anchor}>
-              <div className="w-full bg-red-50 p-0 text-white">{anchor}</div>
+              <SubPage />
             </div>
           </div>
         );
