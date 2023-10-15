@@ -1,6 +1,18 @@
 import { Discord } from "../Discord";
+import { Instagram } from "../Instagram";
+import { OpenSea } from "../OpenSea";
 import { Twitter } from "../Twitter";
 
+const opensea = {
+  name: "opensea",
+  url: "",
+  component: OpenSea,
+} as const;
+const instagram = {
+  name: "instagram",
+  url: "",
+  component: Instagram,
+} as const;
 const twitter = {
   name: "twitter",
   url: "",
@@ -12,16 +24,16 @@ const discord = {
   component: Discord,
 } as const;
 
-const PLATFORM_LIST = [twitter, discord] as const;
+const PLATFORM_LIST = [opensea, instagram, twitter, discord] as const;
 
 export const RelatedLinks = () => {
   return (
-    <div className="right-0 top-64 hidden flex-col rounded bg-[#f8f9fa] shadow-md sm:fixed sm:flex">
+    <div className="right-0 top-64 hidden flex-col rounded bg-transparent sm:fixed sm:flex">
       {PLATFORM_LIST.map(({ name, url, component: Icon }) => {
         return (
           <button
             key={name}
-            className="flex h-12 w-12 items-center justify-center hover:bg-blue-50"
+            className="flex h-12 w-12 items-center justify-center"
             onClick={() => {
               console.log({ name, url });
             }}
@@ -29,7 +41,7 @@ export const RelatedLinks = () => {
             <Icon
               width={32}
               height={32}
-              className="fill-[#1531f5] hover:fill-[#1531f5]"
+              className="drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)]"
             />
           </button>
         );

@@ -3,13 +3,18 @@ type TwitterProps = {
   width?: number;
   height?: number;
 };
-export const Twitter = ({ width = 26, height = 26 }: TwitterProps) => {
+export const Twitter = ({
+  width = 26,
+  height = 26,
+  className,
+}: TwitterProps) => {
   return (
     <svg
       width={`${width}px`}
       height={`${height}px`}
       viewBox="0 0 26 26"
       version="1.1"
+      className={className}
     >
       <g
         id="twitterG1"
