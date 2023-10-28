@@ -18,14 +18,16 @@ export const Roadmap = () => {
     <div className="flex w-full items-end justify-around px-16">
       <div className="w-[320px]">
         <div className="flex flex-col items-center text-white">
-          <div className="pb-1 text-xl text-[#fff056]">{TEXT[0].title}</div>
+          <div className="pb-1 text-xl text-[#fff056] [text-shadow:_0_2px_4px_black]">
+            {TEXT[0].title}
+          </div>
           <div className="pb-5 text-center text-base">{TEXT[0].desc}</div>
         </div>
         <div className="mx-auto h-[250px] w-[282px]">
           <img
             className="block h-full w-full"
-            src="/roadmapAvatar1.png"
-            alt="roadmap-avatar1"
+            src="/roadmapAvatar0.png"
+            alt="roadmap-avatar0"
           />
         </div>
       </div>
@@ -40,14 +42,16 @@ export const Roadmap = () => {
 
       <div className="w-[320px]">
         <div className="flex flex-col items-center text-white">
-          <div className="pb-1 text-xl text-[#fff056]">{TEXT[1].title}</div>
+          <div className="pb-1 text-xl text-[#fff056] [text-shadow:_0_2px_4px_black]">
+            {TEXT[1].title}
+          </div>
           <div className="pb-14 text-center text-base">{TEXT[1].desc}</div>
         </div>
         <div className="mx-auto h-[280px] w-[320px]">
           <img
             className="block h-full w-full"
-            src="/roadmapAvatar2.png"
-            alt="roadmap-avatar2"
+            src="/roadmapAvatar1.png"
+            alt="roadmap-avatar1"
           />
         </div>
       </div>
@@ -62,14 +66,16 @@ export const Roadmap = () => {
 
       <div className="w-[320px]">
         <div className="flex flex-col items-center text-white">
-          <div className="pb-1 text-xl text-[#fff056]">{TEXT[2].title}</div>
+          <div className="pb-1 text-xl text-[#fff056] [text-shadow:_0_2px_4px_black]">
+            {TEXT[2].title}
+          </div>
           <div className="pb-14 text-center text-base">{TEXT[2].desc}</div>
         </div>
         <div className="mx-auto h-[380px] w-[320px]">
           <img
             className="block h-full w-full"
-            src="/roadmapAvatar3.png"
-            alt="roadmap-avatar3"
+            src="/roadmapAvatar2.png"
+            alt="roadmap-avatar2"
           />
         </div>
       </div>

@@ -20,15 +20,15 @@ export const About = () => {
           <div className="box-content h-[210px] w-[210px] py-3">
             <img
               className="block h-full w-full"
-              src="/aboutAvatar1.png"
-              alt="about-avatar1"
+              src="/aboutAvatar0.png"
+              alt="about-avatar0"
             />
           </div>
           <div className="box-content h-[210px] w-[210px] py-3">
             <img
               className="block h-full w-full"
-              src="/aboutAvatar3.png"
-              alt="about-avatar3"
+              src="/aboutAvatar2.png"
+              alt="about-avatar2"
             />
           </div>
         </div>
@@ -36,8 +36,8 @@ export const About = () => {
           <div className="box-content h-[210px] w-[210px] py-3">
             <img
               className="block h-full w-full"
-              src="/aboutAvatar2.png"
-              alt="about-avatar2"
+              src="/aboutAvatar1.png"
+              alt="about-avatar1"
             />
           </div>
         </div>
