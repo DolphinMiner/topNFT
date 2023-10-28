@@ -14,7 +14,35 @@ const TEXT_LIST2 = [
 
 export const About = () => {
   return (
-    <div className="flex w-full justify-center">
+    <div className="flex w-full items-center justify-around px-16">
+      <div className="flex flex-row items-start">
+        <div className="flex flex-col">
+          <div className="box-content h-[210px] w-[210px] py-3">
+            <img
+              className="block h-full w-full"
+              src="/aboutAvatar1.png"
+              alt="about-avatar1"
+            />
+          </div>
+          <div className="box-content h-[210px] w-[210px] py-3">
+            <img
+              className="block h-full w-full"
+              src="/aboutAvatar3.png"
+              alt="about-avatar3"
+            />
+          </div>
+        </div>
+        <div className="-ml-[1px] mt-[118px] flex flex-row items-center justify-center">
+          <div className="box-content h-[210px] w-[210px] py-3">
+            <img
+              className="block h-full w-full"
+              src="/aboutAvatar2.png"
+              alt="about-avatar2"
+            />
+          </div>
+        </div>
+      </div>
+
       <div className="flex flex-col justify-around text-white">
         <div className="flex flex-col items-end">
           <div className="mb-8 text-2xl text-[#fff056] [text-shadow:_0_2px_4px_black]">

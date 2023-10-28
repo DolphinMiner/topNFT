@@ -21,7 +21,7 @@ const SUBPAGE = {
 
 export function Index() {
   return (
-    <div className="mx-auto flex min-h-screen max-w-5xl flex-col bg-[#3394f2]">
+    <div className="mx-auto flex min-h-screen max-w-full flex-col bg-[#3394f2]">
       <Header />
       <RelatedLinks />
       {NEED_ANCHOR.map((anchor) => {

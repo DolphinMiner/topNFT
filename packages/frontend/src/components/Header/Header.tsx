@@ -46,7 +46,7 @@ export const Header = () => {
 
   return (
     <div
-      className={`fixed left-0 right-0 top-0 m-auto box-content flex w-full max-w-5xl flex-row flex-nowrap items-center justify-around bg-inherit`}
+      className={`fixed left-0 right-0 top-0 m-auto box-content flex w-full max-w-full flex-row flex-nowrap items-center justify-around bg-inherit`}
       style={{ height: HEADER_HEIGHT }}
     >
       <div
